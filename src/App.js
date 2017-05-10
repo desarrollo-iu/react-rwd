@@ -13,10 +13,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <ResponsiveColumn>
+        <ResponsiveColumn index={0}>
           {LOREM_IPSUM.repeat(10)}
         </ResponsiveColumn>
-        <ResponsiveColumn>
+        <ResponsiveColumn index={1}>
           {LOREM_IPSUM.repeat(10)}
         </ResponsiveColumn>
       </div>
@@ -25,7 +25,7 @@ class App extends Component {
 }
 
 const ResponsiveColumn = styled.p`
-  text-align: left;
+  text-align: ${({ index }) => index % 2 == 0 ? 'right' : 'left'};
   float: left;
   width: 50%;
   padding: 16px 32px;
