@@ -1,0 +1,13 @@
+.ResponsiveColumn-text {
+  text-align: left;
+  float: left;
+  width: 50%;
+  padding: 16px 32px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .ResponsiveColumn-text {
+    width: 100%;
+  }
+}
